@@ -1,0 +1,14 @@
+.player-container {
+    position: fixed;
+    bottom : 10px;
+    right: 10px;
+    width: 250px;
+}
+
+.bulle-dialogue {
+    background: #f1c40f;
+    border: 3px solid #e67e22;
+    padding: 15px;
+    font-weight: bold;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+}
