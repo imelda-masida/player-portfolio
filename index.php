@@ -1,3 +1,17 @@
+<?php 
+require_once 'db.php'; 
+
+// 1. Récupération des stats
+$query = $pdo->query("SELECT * FROM player_stats LIMIT 1");
+$stats = $query->fetch(PDO::FETCH_ASSOC);
+
+// 2. Logique du personnage (Mood)
+$mood = "normal";
+if ($stats['points'] > 20) {
+    $mood = "serieux"; // Mode Gear 4 / Combat
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
