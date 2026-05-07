@@ -11,6 +11,10 @@ if ($stats['points'] > 20) {
     $mood = "serieux"; // Mode Gear 4 / Combat
 }
 ?>
+<?php include 'config.php'; 
+$res = $pdo->query("SELECT * FROM ta_table_joueur LIMIT 1");
+$player = $res->fetch(); ?>
+<!-- Ton HTML ici avec <?= $player['ton_champ'] ?> -->
 
 <!DOCTYPE html>
 <html lang="en">
