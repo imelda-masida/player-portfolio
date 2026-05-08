@@ -44,6 +44,12 @@ body {
     font-size: 1.1rem;
 }
 
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}
+
 /* La petite pointe de la bulle */
 .bulle-dialogue::after {
     content: '';
@@ -59,4 +65,7 @@ body {
 #player-image {
     width: 200px;
     transition: transform 0.3s ease;
+    animation: float 3s ease-in-out infinite;
+    max-width: 250px;
+
 }

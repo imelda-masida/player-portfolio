@@ -42,7 +42,7 @@ try {
                 ?>
             </div>
             <!-- L'image changera selon l'énergie ou le scroll plus tard -->
-            <img src="assets/luffystyle.png" id="player-image" alt="Luffy">
+            <img src="assets/playerfocus.png" id="player-image" alt="Luffy">
         </div>
     </div>
 </body>

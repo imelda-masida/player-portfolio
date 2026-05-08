@@ -1,18 +1,11 @@
 const pirate = document.getElementById('player-image');
 const bulle = document.getElementById('bulle-dialogue');
 
-//section personnage vue
-const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-
-            bulle.innerText = "Mes stats sont plus hautes que Grand Line!";
-
-            pirate.src = "assets/luffystyle.png";
-        }
-
-    });
-
-});
-
-observer.observe(document.querySelector('#section-stats'));
+// Réaction basée sur l'énergie de la base de données
+if (energy < 50) {
+    pirate.src = "assets/luffystyle.png";
+    bulle.innerText = "Je n'ai plus d'énergie... Viande !!";
+} else {
+    pirate.src = "assets/playerfocus.png";
+    bulle.innerText = "Je suis en pleine forme pour le match !";
+}
