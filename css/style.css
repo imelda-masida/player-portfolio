@@ -1,14 +1,62 @@
-.player-container {
-    position: fixed;
-    bottom : 10px;
-    right: 10px;
-    width: 250px;
+
+
+:root {
+    --luffy-red: #EF233C;
+    --luffy-yellow: #FFD60A;
+    --dark: #2B2D42;
 }
 
+body {
+    background-color: #f0f0f0;
+    font-family: 'Arial Black', sans-serif;
+    color: var(--dark);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.main-wrapper {
+    display: flex;
+    gap: 50px;
+    align-items: center;
+}
+
+/* La carte WANTED */
+.bounty-card {
+    background: #fdf0d5;
+    border: 8px solid var(--dark);
+    padding: 20px;
+    box-shadow: 15px 15px 0px var(--luffy-red);
+    text-align: center;
+}
+
+/* La bulle de dialogue */
 .bulle-dialogue {
-    background: #f1c40f;
-    border: 3px solid #e67e22;
-    padding: 15px;
-    font-weight: bold;
-    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+    background: white;
+    border: 4px solid var(--dark);
+    border-radius: 20px;
+    padding: 20px;
+    position: relative;
+    margin-bottom: 20px;
+    max-width: 250px;
+    font-size: 1.1rem;
+}
+
+/* La petite pointe de la bulle */
+.bulle-dialogue::after {
+    content: '';
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-top: 20px solid var(--dark);
+    transform: translateX(-50%);
+}
+
+#player-image {
+    width: 200px;
+    transition: transform 0.3s ease;
 }
