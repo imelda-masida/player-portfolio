@@ -22,7 +22,7 @@ try {
 <body>
     <div class="main-wrapper">
         <div class="bounty-card">
-            <h1>DERNIER MATCH</h1>
+            <h1>WANTED</h1>
             <div class="player-info">
                 <p><strong>DATE:</strong> <?= htmlspecialchars($stats['match_date']) ?></p>
                 <p><strong>POINTS:</strong> <?= htmlspecialchars($stats['points']) ?></p>
@@ -33,13 +33,12 @@ try {
 
         <div class="luffy-container">
             <div class="bulle-dialogue" id="bulle-dialogue">
-                <?php 
-                    if($stats['energy_level'] < 30) {
-                        echo "Je suis épuisé... il me faut de la viande !";
-                    } else {
-                        echo "J'ai marqué " . $stats['points'] . " points ! En route vers le titre !";
-                    }
-                ?>
+               
+    <script>
+    // On passe la variable PHP à JavaScript / pour afficher un message différent selon le niveau d'énergie
+    const energy = <?= intval($stats['energy_level']) ?>;
+    </script>
+
             </div>
             <!-- L'image changera selon l'énergie ou le scroll plus tard -->
             <img src="assets/playerfocus.png" id="player-image" alt="Luffy">
