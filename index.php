@@ -34,11 +34,15 @@ try {
         <div class="luffy-container">
             <div class="bulle-dialogue" id="bulle-dialogue">
                
-    <script>
-    // On passe la variable PHP à JavaScript / pour afficher un message différent selon le niveau d'énergie
-    const energy = <?= intval($stats['energy_level']) ?>;
-    </script>
+        <script>
+        // On passe la variable PHP à JavaScript / pour afficher un message différent selon le niveau d'énergie
+         const energy = <?= intval($stats['energy_level']) ?>;
+        </script>
+            <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
+            <div class="chart-container" style="position: relative; height:40vh; width:80vw; margin: auto;">
+              <canvas id="radarChart"></canvas>
+            </div>
             </div>
             <!-- L'image changera selon l'énergie ou le scroll plus tard -->
             <img src="assets/playerfocus.png" id="player-image" alt="Luffy">
