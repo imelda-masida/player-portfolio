@@ -46,6 +46,15 @@ try {
             </div>
             <!-- L'image changera selon l'énergie ou le scroll plus tard -->
             <img src="assets/playerfocus.png" id="player-image" alt="Luffy">
+            <section id="contact">
+          <h2>REJOINDRE L'ÉQUIPAGE</h2>
+       <form action="send_message.php" method="POST" class="manga-form">
+           <input type="text" name="expediteur" placeholder="Ton Nom" required>
+           <input type="text" name="club" placeholder="Ton Club / Organisation">
+           <textarea name="contenu" placeholder="Ton message pour le futur Roi du Terrain..." required></textarea>
+          <button type="submit" class="btn-pirate">ENVOYER LE MESSAGE</button>
+      </form>
+     </section>
         </div>
     </div>
 </body>
