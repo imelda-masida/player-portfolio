@@ -43,3 +43,4 @@ const radarChart = new Chart(ctx, {
         }
     }
 });
+bulle.classList.add('show'); // Pour faire apparaître la bulle quand Luffy parle

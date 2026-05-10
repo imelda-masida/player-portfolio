@@ -55,6 +55,34 @@ try {
           <button type="submit" class="btn-pirate">ENVOYER LE MESSAGE</button>
       </form>
      </section>
+     <section id="highlights">
+    <h2>MON HAKI EN ACTION (HIGHLIGHTS)</h2>
+    <div class="video-container">
+        <iframe width="560" height="315" 
+            src="https://www.youtube.com/embed/TON_ID_VIDEO" 
+            title="Basketball Highlights" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen>
+        </iframe>
+    </div>
+   </section>
+    <div class="bounty-card">
+    <h1 class="label-wanted">FICHE TECHNIQUE</h1>
+    
+    <div class="grid-stats">
+        <div class="column">
+            <p><strong>ÂGE :</strong> <?= $stats['age'] ?> ans</p>
+            <p><strong>POIDS :</strong> <?= $stats['poids'] ?> kg</p>
+            <p><strong>MAIN :</strong> <?= $stats['main_forte'] ?></p>
+        </div>
+        <div class="column">
+            <p><strong>VILLE :</strong> <?= $stats['ville'] ?></p>
+            <p><strong>NATION :</strong> <?= $stats['nationalite'] ?></p>
+            <p><strong>LANGUES :</strong> <?= $stats['langues'] ?></p>
+        </div>
+    </div>
+</div>
         </div>
     </div>
 </body>
