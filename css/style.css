@@ -35,15 +35,15 @@ body {
 /* La bulle de dialogue */
 .bulle-dialogue {
     background: white;
-    border: 4px solid var(--dark);
+    border: 4px solid #2B2D42;
     border-radius: 20px;
-    padding: 20px;
+    padding: 15px;
     position: relative;
     margin-bottom: 20px;
-    max-width: 250px;
-    font-size: 1.1rem;
+    display: block; /* Force l'affichage */
+    min-height: 50px;
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
-
 @keyframes float {
     0% { transform: translateY(0px); }
     50% { transform: translateY(-10px); }
@@ -101,7 +101,7 @@ body {
 }
 
 .bulle-dialogue {
-    transform: scale(0);
+    
     transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
