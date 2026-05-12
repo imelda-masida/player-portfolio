@@ -48,14 +48,19 @@ try {
     <div class="bulle-dialogue" id="bulle-dialogue">
         "Je suis prêt pour le prochain match !"
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <div class="chart-container" style="position: relative; height:20vh; width:80vw; margin: auto;">
+    <img src="assets/playerfocus.png" id="player-image" alt="Luffy">
+</div>
+    </div>
+               
+        
+            <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+            <div class="chart-container" style="position: relative; height:40vh; width:80vw; margin: auto;">
               <canvas id="radarChart"></canvas>
             </div>
             </div>
-    <img src="assets/smilestyle.png" id="player-image" alt="Luffy">
-</div>
-    </div>
+            <!-- L'image changera selon l'énergie ou le scroll plus tard -->
+            <img src="assets/smilestyle.png" id="player-image" alt="Luffy">
             <section id="contact">
           <h2>REJOINDRE L'ÉQUIPAGE</h2>
        <form action="send_message.php" method="POST" class="manga-form">
