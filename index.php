@@ -46,7 +46,7 @@ try {
             </div>
             </div>
             <!-- L'image changera selon l'énergie ou le scroll plus tard -->
-            <img src="assets/playerfocus.png" id="player-image" alt="Luffy">
+            <img src="assets/smilestyle.png" id="player-image" alt="Luffy">
             <section id="contact">
           <h2>REJOINDRE L'ÉQUIPAGE</h2>
        <form action="send_message.php" method="POST" class="manga-form">
@@ -69,22 +69,35 @@ try {
     </div>
    </section>
     <div class="bounty-card">
-    <h1 class="label-wanted">FICHE TECHNIQUE</h1>
+    <h1 class="label-wanted">WANTED</h1>
     
-    <div class="grid-stats">
-        <div class="column">
-            <p><strong>ÂGE :</strong> <?= $stats['age'] ?> ans</p>
-            <p><strong>POIDS :</strong> <?= $stats['poids'] ?> kg</p>
-            <p><strong>MAIN :</strong> <?= $stats['main_forte'] ?></p>
+    <div class="player-profile-grid">
+        <div class="info-group">
+            <p><strong>ÂGE :</strong> <?= $stats['age'] ?? '21' ?> ans</p>
+            <p><strong>TAILLE :</strong> <?= $stats['taille'] ?? '190' ?> cm</p>
+            <p><strong>POIDS :</strong> <?= $stats['poids'] ?? '85' ?> kg</p>
+            <p><strong>MAIN :</strong> <?= $stats['main_forte'] ?? 'Droite' ?></p>
         </div>
-        <div class="column">
-            <p><strong>VILLE :</strong> <?= $stats['ville'] ?></p>
-            <p><strong>NATION :</strong> <?= $stats['nationalite'] ?></p>
-            <p><strong>LANGUES :</strong> <?= $stats['langues'] ?></p>
+
+        <div class="info-group">
+            <p><strong>POSTE :</strong> <?= $stats['position'] ?? 'Meneur' ?></p>
+            <p><strong>VILLE :</strong> <?= $stats['ville'] ?? 'Lubumbashi' ?></p>
+            <p><strong>NATION :</strong> <?= $stats['nationalite'] ?? 'Congolaise' ?></p>
+            <p><strong>LANGUES :</strong> <?= $stats['langues'] ?? 'Français, Swahili' ?></p>
         </div>
     </div>
+
+    <div class="skills-banner">
+        <p><strong>POINTS FORTS :</strong> <?= $stats['style_jeu'] ?? 'Dribble & Tir' ?></p>
+    </div>
 </div>
-        </div>
+
+<div class="luffy-container">
+    <div class="bulle-dialogue" id="bulle-dialogue">
+        "Je suis prêt pour le prochain match !"
+    </div>
+    <img src="assets/playerfocus.png" id="player-image" alt="Luffy">
+</div>
     </div>
 </body>
 </html>
