@@ -22,26 +22,35 @@ try {
 </head>
 <body>
     <div class="main-wrapper">
-        <div class="bounty-card">
-            <h1 class="label-wanted">WANTED</h1>
-             <div class="player-profile-grid">
-        <div class="info-group">
-            <p><strong>ÂGE :</strong> <?= $stats['age'] ?? '21' ?> ans</p>
-            <p><strong>TAILLE :</strong> <?= $stats['taille'] ?? '190' ?> cm</p>
-            <p><strong>POIDS :</strong> <?= $stats['poids'] ?? '85' ?> kg</p>
-            <p><strong>MAIN :</strong> <?= $stats['main_forte'] ?? 'Droite' ?></p>
+       <section id="bounty">
+    <div class="bounty-card">
+        <h1 class="wanted-title">WANTED</h1>
+        
+        <div class="bounty-content">
+            <div class="stats-col">
+                <p><strong>ÂGE:</strong> <?= htmlspecialchars($stats['age']) ?> ANS</p>
+                <p><strong>TAILLE:</strong> <?= htmlspecialchars($stats['taille']) ?> CM</p>
+                <p><strong>POIDS:</strong> <?= htmlspecialchars($stats['poids']) ?> KG</p>
+                <p><strong>MAIN:</strong> <?= htmlspecialchars($stats['main_forte']) ?></p>
+            </div>
+            
+            <div class="stats-col">
+                <p><strong>VILLE:</strong> <?= htmlspecialchars($stats['ville']) ?></p>
+                <p><strong>NATION:</strong> <?= htmlspecialchars($stats['nationalite']) ?></p>
+                <p><strong>POSTE:</strong> <?= htmlspecialchars($stats['position']) ?></p>
+                <p><strong>LANGUES:</strong> <?= htmlspecialchars($stats['langues']) ?></p>
+            </div>
         </div>
-           <div class="info-group">
-            <p><strong>POSTE :</strong> <?= $stats['position'] ?? 'Meneur' ?></p>
-            <p><strong>VILLE :</strong> <?= $stats['ville'] ?? 'Lubumbashi' ?></p>
-            <p><strong>NATIONALITÉ :</strong> <?= $stats['nationalite'] ?? 'Congolaise' ?></p>
-            <p><strong>LANGUES :</strong> <?= $stats['langues'] ?? 'Français, Swahili' ?></p>
-        </div>
-    </div>
 
-    <div class="skills-banner">
-        <p><strong>POINTS FORTS :</strong> <?= $stats['style_jeu'] ?? 'Dribble & Tir' ?></p>
+        <div class="skills-highlight">
+            <p><strong>STYLE DE JEU:</strong> <?= htmlspecialchars($stats['style_jeu']) ?></p>
+        </div>
+
+        <div class="bounty-footer">
+            <p><strong>DEAD OR ALIVE - RECRUITING</strong></p>
+        </div>
     </div>
+</section> 
 </div>
 
 <div class="luffy-container">
