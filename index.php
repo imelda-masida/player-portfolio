@@ -51,15 +51,11 @@ try {
     <img src="assets/playerfocus.png" id="player-image" alt="Luffy">
 </div>
     </div>
-               
-        
-            <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
-            <div class="chart-container" style="position: relative; height:40vh; width:80vw; margin: auto;">
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+           <div class="chart-container" style="position: relative; height:40vh; width:80vw; margin: auto;">
               <canvas id="radarChart"></canvas>
             </div>
             </div>
-            
             <section id="contact">
           <h2>REJOINDRE L'ÉQUIPAGE</h2>
        <form action="send_message.php" method="POST" class="manga-form">
