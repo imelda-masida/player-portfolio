@@ -59,8 +59,7 @@ try {
               <canvas id="radarChart"></canvas>
             </div>
             </div>
-            <!-- L'image changera selon l'énergie ou le scroll plus tard -->
-            <img src="assets/smilestyle.png" id="player-image" alt="Luffy">
+            
             <section id="contact">
           <h2>REJOINDRE L'ÉQUIPAGE</h2>
        <form action="send_message.php" method="POST" class="manga-form">
