@@ -34,7 +34,7 @@ try {
            <div class="info-group">
             <p><strong>POSTE :</strong> <?= $stats['position'] ?? 'Meneur' ?></p>
             <p><strong>VILLE :</strong> <?= $stats['ville'] ?? 'Lubumbashi' ?></p>
-            <p><strong>NATION :</strong> <?= $stats['nationalite'] ?? 'Congolaise' ?></p>
+            <p><strong>NATIONALITÉ :</strong> <?= $stats['nationalite'] ?? 'Congolaise' ?></p>
             <p><strong>LANGUES :</strong> <?= $stats['langues'] ?? 'Français, Swahili' ?></p>
         </div>
     </div>
