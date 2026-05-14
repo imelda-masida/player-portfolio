@@ -130,3 +130,14 @@ body {
     font-weight: bold;
     text-transform: uppercase;
 }
+
+body {
+    background-color: #eee7e2; 
+    background-image: none;    /* Force la suppression d'une image de fond s */
+    margin: 0;
+    padding: 0;
+}
+
+.main-wrapper {
+    background: transparent; /* Assure-toi que le conteneur ne cache pas le fond du body */
+}
