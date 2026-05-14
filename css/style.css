@@ -108,3 +108,25 @@ body {
 .bulle-dialogue.show {
     transform: scale(1);
 }
+.bounty-content {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    background: #fdf0d5; /* Teinte papier parchemin */
+}
+
+.stats-col p {
+    margin: 10px 0;
+    font-family: 'Courier New', monospace; /* Style machine à écrire */
+    font-size: 1.1rem;
+    color: #2B2D42;
+    text-align: left;
+}
+
+.skills-highlight {
+    background: #2B2D42;
+    color: #FFD60A;
+    padding: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+}

@@ -86,6 +86,54 @@ try {
         </iframe>
     </div>
    </section>
+   <script>
+    // 1. Configuration du Graphique Radar avec tes données PHP
+    const ctx = document.getElementById('radarChart').getContext('2d');
+    const radarChart = new Chart(ctx, {
+        type: 'radar',
+        data: {
+            labels: ['Points', 'Assists', 'Énergie', 'Vitesse', 'Mental'],
+            datasets: [{
+                label: 'Stats Actuelles',
+                data: [
+                    <?= intval($stats['points']) ?>, 
+                    <?= intval($stats['assists']) ?>, 
+                    <?= intval($stats['energy_level']) ?>, 
+                    85, // Tu pourras ajouter une colonne 'vitesse' en DB plus tard
+                    90  // Haki du conquérant
+                ],
+                backgroundColor: 'rgba(239, 35, 60, 0.2)',
+                borderColor: '#EF233C',
+                borderWidth: 3
+            }]
+        },
+        options: {
+            scales: {
+                r: { suggestMin: 0, suggestMax: 100 }
+            }
+        }
+    });
+
+    // 2. Animation de la Bulle de dialogue
+    document.addEventListener("DOMContentLoaded", () => {
+        const bulle = document.getElementById('bulle-dialogue');
+        const nrg = <?= intval($stats['energy_level']) ?>;
+
+        // On change le texte selon l'énergie
+        if (nrg > 80) {
+            bulle.innerText = "Je suis bouillant pour le prochain match ! 🏀";
+        } else if (nrg < 40) {
+            bulle.innerText = "Besoin de repos... et de viande ! 🍖";
+        }
+
+        // Petit effet d'apparition
+        bulle.style.opacity = "0";
+        setTimeout(() => {
+            bulle.style.transition = "opacity 0.5s ease-in-out";
+            bulle.style.opacity = "1";
+        }, 800);
+    });
+</script>
     </div>
 </body>
 </html>
