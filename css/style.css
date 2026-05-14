@@ -101,7 +101,7 @@ body {
 }
 
 .bulle-dialogue {
-    
+    margin-bottom: 10px; /* Espace entre la bulle et la tête du perso */
     transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
@@ -140,4 +140,27 @@ body {
 
 .main-wrapper {
     background: transparent; /* Assure-toi que le conteneur ne cache pas le fond du body */
+    display: flex;
+    flex-direction: column; /* Aligne les éléments verticalement */
+    align-items: center;    /* Centre horizontalement */
+    justify-content: center;
+    min-height: 100vh;      /* Prend toute la hauteur de l'écran */
+    padding: 20px;
+}
+.luffy-container {
+    position: fixed;  /* Il reste à sa place même quand on scrolle */
+    bottom: 20px;     /* 20 pixels du bas */
+    right: 20px;      /* 20 pixels de la droite */
+    z-index: 100;     /* S'assure qu'il passe au-dessus du reste */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.chart-container {
+    width: 100%;
+    max-width: 500px; /* Empêche le graphique de devenir géant */
+    margin: 40px auto; /* Centre le graphique avec de l'espace haut/bas */
+    background: rgba(255, 255, 255, 0.8); /* Fond léger pour mieux voir le tracé */
+    border-radius: 15px;
 }

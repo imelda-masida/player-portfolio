@@ -41,6 +41,7 @@ try {
                 <p><strong>LANGUES:</strong> <?= htmlspecialchars($stats['langues']) ?></p>
             </div>
         </div>
+        
 
         <div class="skills-highlight">
             <p><strong>STYLE DE JEU:</strong> <?= htmlspecialchars($stats['style_jeu']) ?></p>
