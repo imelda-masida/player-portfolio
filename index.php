@@ -36,7 +36,7 @@ try {
             
             <div class="stats-col">
                 <p><strong>VILLE:</strong> <?= htmlspecialchars($stats['ville']) ?></p>
-                <p><strong>NATION:</strong> <?= htmlspecialchars($stats['nationalite']) ?></p>
+                <p><strong>ORIGINE:</strong> <?= htmlspecialchars($stats['nationalite']) ?></p>
                 <p><strong>POSTE:</strong> <?= htmlspecialchars($stats['position']) ?></p>
                 <p><strong>LANGUES:</strong> <?= htmlspecialchars($stats['langues']) ?></p>
             </div>
