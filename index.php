@@ -2,17 +2,23 @@
 require_once 'config.php'; 
 
 try {
-    // On récupère le dernier match enregistré
     $query = $pdo->query("SELECT * FROM joueur_stats LIMIT 1");
     $stats = $query->fetch(PDO::FETCH_ASSOC);
+
+    // --- LOGIQUE DE L'IMAGE DYNAMIQUE ---
+    $image_joueur = "assets/playerfocus.png"; // Image par défaut si aucune condition n'est remplie
+
+    if ($stats['energy_level'] > 80) {
+        $image_joueur = "assets/smilestyle.png"; // Mode Focus (ton image actuelle)
+    } elseif ($stats['energy_level'] < 30) {
+        $image_joueur = "assets/luffystyle.png"; // Mode Fatigué
+    }
+
 } catch (Exception $e) {
-    // Si la DB échoue, on crée des stats vides pour ne pas casser la page
     $stats = ['points' => 0, 'assists' => 0, 'energy_level' => 0, 'age' => 0, 'taille' => 0];
-    echo "";
+    $image_joueur = "assets/playerfocus.png";
 }
-
 ?>
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -53,12 +59,24 @@ try {
     </div>
 </section> 
 </div>
+<section id="highlights">
+    <h2>MON HAKI EN ACTION (HIGHLIGHTS)</h2>
+    <div class="video-container">
+        <iframe width="560" height="315" 
+            src="https://www.youtube.com/embed/TON_ID_VIDEO" 
+            title="Basketball Highlights" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen>
+        </iframe>
+    </div>
+   </section>
 
 <div class="luffy-container">
     <div class="bulle-dialogue" id="bulle-dialogue">
         "Je suis prêt pour le prochain match !"
     </div>
-    <img src="assets/playerfocus.png" id="player-image" alt="Luffy">
+    <img src="<?= $image_joueur ?>" id="player-image" alt="Statut Joueur">
 </div>
     </div>
         <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
@@ -75,20 +93,8 @@ try {
           <button type="submit" class="btn-pirate">ENVOYER LE MESSAGE</button>
       </form>
      </section>
-     <section id="highlights">
-    <h2>MON HAKI EN ACTION (HIGHLIGHTS)</h2>
-    <div class="video-container">
-        <iframe width="560" height="315" 
-            src="https://www.youtube.com/embed/TON_ID_VIDEO" 
-            title="Basketball Highlights" 
-            frameborder="0" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-            allowfullscreen>
-        </iframe>
-    </div>
-   </section>
    <script>
-    // 1. Configuration du Graphique Radar avec tes données PHP
+    // Configuration du Graphique Radar avec tes données PHP
     const ctx = document.getElementById('radarChart').getContext('2d');
     const radarChart = new Chart(ctx, {
         type: 'radar',

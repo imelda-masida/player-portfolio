@@ -103,6 +103,13 @@ body {
 .bulle-dialogue {
     margin-bottom: 10px; /* Espace entre la bulle et la tête du perso */
     transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    background: white;
+    border: 3px solid #2B2D42;
+    border-radius: 15px;
+    padding: 10px;
+    position: relative;
+    margin-bottom: 10px;
+    box-shadow: 5px 5px 0px #EF233C; /* Ombre style Manga */
 }
 
 .bulle-dialogue.show {
@@ -137,6 +144,11 @@ body {
     margin: 0;
     padding: 0;
 }
+#player-image {
+    background: transparent !important;
+    mix-blend-mode: multiply; /* Tente de supprimer les fonds clairs/carreaux */
+    display: block;
+}
 
 .main-wrapper {
     background: transparent; /* Assure-toi que le conteneur ne cache pas le fond du body */
@@ -150,11 +162,12 @@ body {
 .luffy-container {
     position: fixed;  /* Il reste à sa place même quand on scrolle */
     bottom: 20px;     /* 20 pixels du bas */
-    right: 20px;      /* 20 pixels de la droite */
-    z-index: 100;     /* S'assure qu'il passe au-dessus du reste */
+    right: 30px;      /* 20 pixels de la droite */
+    z-index: 1000;     /* S'assure qu'il passe au-dessus du reste */
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 250px; /* Largeur fixe pour éviter les problèmes de taille */
 }
 
 .chart-container {
