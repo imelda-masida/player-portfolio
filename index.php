@@ -59,19 +59,15 @@ try {
     </div>
 </section> 
 </div>
-<section id="highlights">
-    <h2>MON HAKI EN ACTION (HIGHLIGHTS)</h2>
-    <div class="video-container">
-        <iframe width="560" height="315" 
-            src="https://www.youtube.com/embed/TON_ID_VIDEO" 
-            title="Basketball Highlights" 
-            frameborder="0" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-            allowfullscreen>
-        </iframe>
-    </div>
-   </section>
-
+<section id="contact">
+          <h2>REJOINDRE L'ÉQUIPAGE</h2>
+       <form action="send_message.php" method="POST" class="manga-form">
+           <input type="text" name="expediteur" placeholder="Ton Nom" required>
+           <input type="text" name="club" placeholder="Ton Club / Organisation">
+           <textarea name="contenu" placeholder="Ton message pour le futur Roi du Terrain..." required></textarea>
+          <button type="submit" class="btn-pirate">ENVOYER LE MESSAGE</button>
+      </form>
+     </section>
 <div class="luffy-container">
     <div class="bulle-dialogue" id="bulle-dialogue">
         "Je suis prêt pour le prochain match !"
@@ -84,15 +80,19 @@ try {
               <canvas id="radarChart"></canvas>
             </div>
             </div>
-            <section id="contact">
-          <h2>REJOINDRE L'ÉQUIPAGE</h2>
-       <form action="send_message.php" method="POST" class="manga-form">
-           <input type="text" name="expediteur" placeholder="Ton Nom" required>
-           <input type="text" name="club" placeholder="Ton Club / Organisation">
-           <textarea name="contenu" placeholder="Ton message pour le futur Roi du Terrain..." required></textarea>
-          <button type="submit" class="btn-pirate">ENVOYER LE MESSAGE</button>
-      </form>
-     </section>
+<section id="highlights">
+    <h2>MON HAKI EN ACTION (HIGHLIGHTS)</h2>
+    <div class="video-container">
+        <iframe width="560" height="315" 
+            src="https://www.youtube.com/embed/TON_ID_VIDEO" 
+            title="Basketball Highlights" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen>
+        </iframe>
+    </div>
+   </section>
+            
    <script>
     // Configuration du Graphique Radar avec tes données PHP
     const ctx = document.getElementById('radarChart').getContext('2d');
@@ -121,7 +121,7 @@ try {
         }
     });
 
-    // 2. Animation de la Bulle de dialogue
+    // Animation de la Bulle de dialogue
     document.addEventListener("DOMContentLoaded", () => {
         const bulle = document.getElementById('bulle-dialogue');
         const nrg = <?= intval($stats['energy_level']) ?>;
