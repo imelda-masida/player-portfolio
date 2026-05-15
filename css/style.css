@@ -7,20 +7,25 @@
 }
 
 body {
-    background-color: #f0f0f0;
-    font-family: 'Arial Black', sans-serif;
+    background-color: #1a1a1a; /* Fond sombre style Manga Élite */
+    color: #ffffff;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
     color: var(--dark);
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    margin: 0;
 }
 
 .main-wrapper {
     display: flex;
     gap: 50px;
     align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
 }
 
 /* La carte WANTED */
@@ -105,11 +110,16 @@ body {
     transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     background: white;
     border: 3px solid #2B2D42;
-    border-radius: 15px;
     padding: 10px;
     position: relative;
     margin-bottom: 10px;
     box-shadow: 5px 5px 0px #EF233C; /* Ombre style Manga */
+    background: #ffffff;
+    color: #000;
+    border: 3px solid #EF233C;
+    border-radius: 15px;
+    margin-bottom: 15px;
+    font-weight: bold;
 }
 
 .bulle-dialogue.show {
@@ -168,6 +178,11 @@ body {
     flex-direction: column;
     align-items: center;
     width: 250px; /* Largeur fixe pour éviter les problèmes de taille */
+    flex: 1;
+    max-width: 30%;
+    display: flex;
+    align-items: center;
+    text-align: center;
 }
 
 .chart-container {
@@ -176,4 +191,71 @@ body {
     margin: 40px auto; /* Centre le graphique avec de l'espace haut/bas */
     background: rgba(255, 255, 255, 0.8); /* Fond léger pour mieux voir le tracé */
     border-radius: 15px;
+}
+/* --- DISPOSITION DU HAUT (Wanted - Perso - Message) --- */
+.top-layout {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 50px;
+}
+
+/* Ajustement des largeurs pour que tout tienne sur une ligne */
+#bounty {
+    flex: 1;
+    max-width: 35%;
+}
+
+#contact {
+    flex: 1;
+    max-width: 35%;
+}
+
+/* Gestion de l'image du joueur et triche pour les "carreaux" */
+#player-image {
+    width: 100%;
+    max-height: 400px;
+    object-fit: contain;
+    /* mix-blend-mode tente de fusionner les carreaux clairs avec le fond sombre */
+    mix-blend-mode: screen; 
+}
+
+/* --- SECTION VIDÉO (Au milieu à l'horizontale) --- */
+#highlights {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    max-width: 800px; /* Grande barre horizontale */
+    margin: 0 auto;
+    aspect-ratio: 16 / 9;
+}
+
+.video-container iframe {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    border: 4px solid #EF233C;
+}
+
+/* --- SECTION PERFORMANCE (En bas) --- */
+#performance {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.chart-container {
+    position: relative;
+    height: 400px;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 20px;
+    border-radius: 15px;
+    border: 2px dashed #333;
 }
