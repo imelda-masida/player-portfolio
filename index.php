@@ -26,12 +26,20 @@ try {
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <!-- DEBUT DU RUBAN -->
+<div class="top-ribbon">
+    <div class="ribbon-text">
+        <!-- Message principal du ruban -->
+        <span>🏴‍☠️ RECRUTEMENT DE L'ÉQUIPAGE OUVERT - SAISON 2026 🏀</span>
+    </div>
+</div>
+<!-- FIN DU RUBAN  -->
     <div class="main-wrapper">
 
-        <!-- SECTION 1 : Le haut de la page (WANTED - PERSO - FORMULAIRE) -->
+        <!--  Le haut de la page (WANTED - PERSO - FORMULAIRE) -->
         <div class="top-layout">
             
-            <!-- À GAUCHE : La carte Wanted -->
+            <!--  La carte Wanted -->
             <section id="bounty">
                 <div class="bounty-card">
                     <h1 class="wanted-title">WANTED</h1>
@@ -58,7 +66,7 @@ try {
                 </div>
             </section> 
 
-            <!-- AU MILIEU : Le Personnage et sa Bulle -->
+            <!--  Le Personnage et sa Bulle -->
             <div class="luffy-container">
                 <div class="bulle-dialogue" id="bulle-dialogue">
                     "Je suis prêt pour le prochain match !"
@@ -66,7 +74,7 @@ try {
                 <img src="<?= $image_joueur ?>" id="player-image" alt="Joueur">
             </div>
 
-            <!-- À DROITE : Envoyer un message -->
+            <!--  Envoyer un message -->
             <section id="contact">
                 <h2>REJOINDRE L'ÉQUIPAGE</h2>
                 <form action="send_message.php" method="POST" class="manga-form">
@@ -79,7 +87,7 @@ try {
 
         </div> <!-- Fin de la top-layout -->
 
-        <!-- SECTION 2 : La Vidéo au milieu à l'horizontale -->
+        <!--  La Vidéo au milieu à l'horizontale -->
         <section id="highlights">
             <h2>MON HAKI EN ACTION (HIGHLIGHTS)</h2>
             <div class="video-container">
@@ -93,7 +101,7 @@ try {
             </div>
         </section>
 
-        <!-- SECTION 3 : La Carte de performance (Le Radar Chart) -->
+        <!--  La Carte de performance (Le Radar Chart) -->
         <section id="performance">
             <h2>PERFORMANCE SUR LE TERRAIN</h2>
             <div class="chart-container">
@@ -145,29 +153,30 @@ try {
             }
         });
     </script>
-    <footer class="footer-pirate">
+   <footer class="footer-pirate">
     <div class="footer-content">
-        <!-- Bloc Gauche : Droits d'auteur -->
-        <div class="footer-section copyright">
-            <p>&copy; 2026 Stats de Pirate. Tous droits réservés.</p>
-            <p>Conçu par <span class="highlight">Stone</span> - Capitaine Développeur.</p>
+        <!--  Copyright -->
+        <div class="footer-left">
+            <p>&copy; 2026 Stats de Pirate. Tous droits réservés | Développé par <span class="highlight">Stone</span></p>
         </div>
 
-        <!-- Bloc Milieu : Contact rapide -->
-        <div class="footer-section contact-info">
-            <h3>CONTACT DIRECT</h3>
-            <p>📍 Encre : Kampala</p>
-            <p>📧 Email : contact@stone-pirate.com</p>
-        </div>
-
-        <!-- Bloc Droite : Réseaux / Liens -->
-        <div class="footer-section social-links">
-            <h3>REJOINDRE LE REPAIRE</h3>
-            <div class="social-icons">
-                <a href="#" class="social-btn">GitHub</a>
-                <a href="#" class="social-btn">LinkedIn</a>
-                <a href="#" class="social-btn">Twitter</a>
-            </div>
+        <!-- Partie Droite : Tes 5 Canaux de Contact -->
+        <div class="footer-right">
+            <a href="mailto:tonadresse@email.com" class="social-link email" title="E-mail">
+                <span>📧 Email</span>
+            </a>
+            <a href="https://wa.me/243XXXXXXXXX" target="_blank" class="social-link whatsapp" title="WhatsApp">
+                <span>💬 WhatsApp</span>
+            </a>
+            <a href="https://t.me/ton_username" target="_blank" class="social-link telegram" title="Telegram">
+                <span>✈️ Telegram</span>
+            </a>
+            <a href="https://instagram.com/ton_compte" target="_blank" class="social-link instagram" title="Instagram">
+                <span>📸 Instagram</span>
+            </a>
+            <a href="https://tiktok.com/@ton_compte" target="_blank" class="social-link tiktok" title="TikTok">
+                <span>🎵 TikTok</span>
+            </a>
         </div>
     </div>
 </footer>
