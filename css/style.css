@@ -304,7 +304,7 @@ html, body {
 .tiktok:hover { background-color: #fe2c55; }
 /* --- WANTED EN NOIR --- */
 .wanted-title {
-    color: #000000 !important; /* Force la couleur noire */
+    color: #000000; /* Force la couleur noire */
     font-size: 3.5rem;
     font-weight: 900;
     margin: 10px 0;
@@ -313,7 +313,7 @@ html, body {
 
 /* --- DEAD OR ALIVE EN NOIR --- */
 .bounty-footer p strong {
-    color: #000000 !important; /* Force la couleur noire */
+    color: #000000 ; /* Force la couleur noire */
     font-size: 1.2rem;
     letter-spacing: 2px;
 }

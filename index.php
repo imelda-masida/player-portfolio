@@ -120,7 +120,7 @@ try {
             data: {
                 labels: ['Points', 'Assists', 'Énergie', 'Vitesse', 'Mental'],
                 datasets: [{
-                    label: 'Stats Actuelles',
+                    label:'Stats Actuelles',
                     data: [
                         <?= intval($stats['points'] ?? 0) ?>, 
                         <?= intval($stats['assists'] ?? 0) ?>, 
@@ -138,6 +138,11 @@ try {
                 maintainAspectRatio: false,
                 scales: {
                     r: { suggestMin: 0, suggestMax: 100 }
+                },
+                plugins: {
+                    legend: {
+                        display: false // On cache la légende d'origine pour mettre notre badge orange HTML
+                    }
                 }
             }
         });
