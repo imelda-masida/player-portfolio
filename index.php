@@ -145,5 +145,31 @@ try {
             }
         });
     </script>
+    <footer class="footer-pirate">
+    <div class="footer-content">
+        <!-- Bloc Gauche : Droits d'auteur -->
+        <div class="footer-section copyright">
+            <p>&copy; 2026 Stats de Pirate. Tous droits réservés.</p>
+            <p>Conçu par <span class="highlight">Stone</span> - Capitaine Développeur.</p>
+        </div>
+
+        <!-- Bloc Milieu : Contact rapide -->
+        <div class="footer-section contact-info">
+            <h3>CONTACT DIRECT</h3>
+            <p>📍 Encre : Kampala</p>
+            <p>📧 Email : contact@stone-pirate.com</p>
+        </div>
+
+        <!-- Bloc Droite : Réseaux / Liens -->
+        <div class="footer-section social-links">
+            <h3>REJOINDRE LE REPAIRE</h3>
+            <div class="social-icons">
+                <a href="#" class="social-btn">GitHub</a>
+                <a href="#" class="social-btn">LinkedIn</a>
+                <a href="#" class="social-btn">Twitter</a>
+            </div>
+        </div>
+    </div>
+</footer>
 </body>
 </html>

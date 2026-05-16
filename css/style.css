@@ -256,3 +256,64 @@ body {
     border-radius: 15px;
     border: 2px dashed #333;
 }
+/* --- LE FOOTER --- */
+.footer-pirate {
+    background-color: #0d0d13; /* Noir très profond style manga */
+    color: #8d99ae;
+    padding: 30px 20px;
+    margin-top: 60px; /* Crée un espace avec le bloc du dessus */
+    border-top: 4px solid #ef233c; /* Ligne rouge distinctive en haut de la barre */
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between; /* Aligne les 3 blocs horizontalement */
+    align-items: flex-start;
+    flex-wrap: wrap; /* S'adapte sur mobile */
+    gap: 20px;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 250px;
+}
+
+.footer-section h3 {
+    color: #ffd60a; /* Jaune or pour les titres du bas */
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+}
+
+.footer-section p {
+    margin: 8px 0;
+    font-size: 0.9rem;
+}
+
+.highlight {
+    color: #ef233c;
+    font-weight: bold;
+}
+
+/* Boutons des réseaux sociaux */
+.social-icons {
+    display: flex;
+    gap: 10px;
+}
+
+.social-btn {
+    background: #2b2d42;
+    color: #fff;
+    text-decoration: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.social-btn:hover {
+    background: #ef233c; /* Devient rouge au survol */
+}
