@@ -68,12 +68,20 @@ body {
 }
 
 #player-image {
-    width: 200px;
     transition: transform 0.3s ease;
     animation: float 3s ease-in-out infinite;
     max-width: 250px;
-
+     width: 100%;
+    max-height: 400px;
+    object-fit: contain;
+    /* mix-blend-mode tente de fusionner les carreaux clairs avec le fond sombre */
+    mix-blend-mode: screen; 
+    background: transparent !important;
+    mix-blend-mode: multiply; /* Tente de supprimer les fonds clairs/carreaux */
+    display: block;
 }
+
+
 .manga-form {
     display: flex;
     flex-direction: column;
@@ -154,11 +162,7 @@ body {
     margin: 0;
     padding: 0;
 }
-#player-image {
-    background: transparent !important;
-    mix-blend-mode: multiply; /* Tente de supprimer les fonds clairs/carreaux */
-    display: block;
-}
+
 
 .main-wrapper {
     background: transparent; /* Assure-toi que le conteneur ne cache pas le fond du body */
@@ -212,14 +216,7 @@ body {
     max-width: 35%;
 }
 
-/* Gestion de l'image du joueur et triche pour les "carreaux" */
-#player-image {
-    width: 100%;
-    max-height: 400px;
-    object-fit: contain;
-    /* mix-blend-mode tente de fusionner les carreaux clairs avec le fond sombre */
-    mix-blend-mode: screen; 
-}
+
 
 /* --- SECTION VIDÉO (Au milieu à l'horizontale) --- */
 #highlights {
