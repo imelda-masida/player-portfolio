@@ -281,8 +281,17 @@ html, body {
     transition: transform 0.2s ease, background-color 0.2s ease;
     display: flex;
     align-items: center;
+    font-weight: bold;
+    border-radius: 20px; 
+    /* Permet d'aligner parfaitement le logo et le texte sur la même ligne */
+    display: inline-flex;
+    align-items: center;
+    gap: 8px; /* Crée un espace de 8px entre le logo et le texte */
 }
-
+/* Optionnel : Agrandir légèrement la taille des logos uniquement */
+.social-link i {
+    font-size: 1.1rem;
+}
 .social-link:hover {
     transform: translateY(-3px);
 }
@@ -335,3 +344,5 @@ html, body {
     text-transform: uppercase;  /* Force le texte à s'afficher en majuscules */
     font-weight: bold;
 }
+
+

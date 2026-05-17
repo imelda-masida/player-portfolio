@@ -170,19 +170,19 @@ try {
         <!-- les Canaux de Contact avec les vrais logos -->
 <div class="footer-right">
     <a href="mailto:tonadresse@email.com" class="social-link email" title="E-mail">
-        <i class="fa-solid fa-envelope"></i> <span></span>
+        <i class="fa-solid fa-envelope"></i> 
     </a>
     <a href="https://wa.me/243XXXXXXXXX" target="_blank" class="social-link whatsapp" title="WhatsApp">
-        <i class="fa-brands fa-whatsapp"></i> <span></span>
+        <i class="fa-brands fa-whatsapp"></i> 
     </a>
     <a href="https://t.me/ton_username" target="_blank" class="social-link telegram" title="Telegram">
-        <i class="fa-brands fa-telegram"></i> <span></span>
+        <i class="fa-brands fa-telegram"></i> 
     </a>
     <a href="https://instagram.com/ton_compte" target="_blank" class="social-link instagram" title="Instagram">
-        <i class="fa-brands fa-instagram"></i> <span></span>
+        <i class="fa-brands fa-instagram"></i> 
     </a>
     <a href="https://tiktok.com/@ton_compte" target="_blank" class="social-link tiktok" title="TikTok">
-        <i class="fa-brands fa-tiktok"></i> <span></span>
+        <i class="fa-brands fa-tiktok"></i> 
     </a>
    </div>
     </div>
