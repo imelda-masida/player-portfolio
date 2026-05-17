@@ -23,6 +23,8 @@ try {
 <head>
     <meta charset="UTF-8">
     <title>Stats de Pirate</title>
+    <!-- Chargement de la bibliothèque d'icônes Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -165,24 +167,24 @@ try {
             <p>&copy; 2026 Stats de Pirate. Tous droits réservés | Développé par <span class="highlight">Stone</span></p>
         </div>
 
-        <!-- Partie Droite : Tes 5 Canaux de Contact -->
-        <div class="footer-right">
-            <a href="mailto:tonadresse@email.com" class="social-link email" title="E-mail">
-                <span>📧 Email</span>
-            </a>
-            <a href="https://wa.me/243XXXXXXXXX" target="_blank" class="social-link whatsapp" title="WhatsApp">
-                <span>💬 WhatsApp</span>
-            </a>
-            <a href="https://t.me/ton_username" target="_blank" class="social-link telegram" title="Telegram">
-                <span>✈️ Telegram</span>
-            </a>
-            <a href="https://instagram.com/ton_compte" target="_blank" class="social-link instagram" title="Instagram">
-                <span>📸 Instagram</span>
-            </a>
-            <a href="https://tiktok.com/@ton_compte" target="_blank" class="social-link tiktok" title="TikTok">
-                <span>🎵 TikTok</span>
-            </a>
-        </div>
+        <!-- les Canaux de Contact avec les vrais logos -->
+<div class="footer-right">
+    <a href="mailto:tonadresse@email.com" class="social-link email" title="E-mail">
+        <i class="fa-solid fa-envelope"></i> <span></span>
+    </a>
+    <a href="https://wa.me/243XXXXXXXXX" target="_blank" class="social-link whatsapp" title="WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i> <span></span>
+    </a>
+    <a href="https://t.me/ton_username" target="_blank" class="social-link telegram" title="Telegram">
+        <i class="fa-brands fa-telegram"></i> <span></span>
+    </a>
+    <a href="https://instagram.com/ton_compte" target="_blank" class="social-link instagram" title="Instagram">
+        <i class="fa-brands fa-instagram"></i> <span></span>
+    </a>
+    <a href="https://tiktok.com/@ton_compte" target="_blank" class="social-link tiktok" title="TikTok">
+        <i class="fa-brands fa-tiktok"></i> <span></span>
+    </a>
+   </div>
     </div>
 </footer>
 </body>
