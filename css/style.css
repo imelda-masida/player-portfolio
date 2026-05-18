@@ -120,7 +120,6 @@ html, body {
     transform: translateX(-50%);
 }
 
-/* Gestion de l'image et masquage des "carreaux" */
 #player-image {
     width: 100%;
     max-width: 250px;
@@ -128,10 +127,14 @@ html, body {
     object-fit: contain;
     display: block;
     background: transparent !important;
-    /* mix-blend-mode: multiply fait disparaître le fond blanc ou les carreaux clairs */
-    mix-blend-mode: multiply; 
+    
+    /* TECHNIQUE DE SECOURS : */
+    mix-blend-mode: color-burn; /* Idéal si les carreaux sont gris très clairs */
+    mix-blend-mode: screen; 
+    
     animation: float 3s ease-in-out infinite;
-    transition: transform 0.3s ease;
+    position: relative;
+    z-index: 10;
 }
 
 @keyframes float {

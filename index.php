@@ -5,19 +5,40 @@ try {
     $query = $pdo->query("SELECT * FROM joueur_stats LIMIT 1");
     $stats = $query->fetch(PDO::FETCH_ASSOC);
 
-    // Logique de l'image dynamique
-    $image_joueur = "assets/luffystyle.png"; 
-    if ($stats['energy_level'] > 80) {
-        $image_joueur = "assets/playerfocus.png"; 
-    } elseif ($stats['energy_level'] < 30) {
-        $image_joueur = "assets/smilestyle.png"; 
+    if ($stats) {
+        /* 
+           --- LE MOTEUR AUTONOME ---
+           Au lieu de prendre fixement $stats['energy_level'], on applique une variation.
+           rand(-20, 20) va générer un nombre au hasard (ex: -15, +5, +18).
+           Cela simule la fatigue du joueur après un match ou sa récupération !
+        */
+        $variation = rand(-20, 20);
+        $energie_virtuelle = intval($stats['energy_level']) + $variation;
+
+        // On bloque l'énergie entre 0 et 100 pour éviter les chiffres bizarres
+        if ($energie_virtuelle > 100) $energie_virtuelle = 100;
+        if ($energie_virtuelle < 0) $energie_virtuelle = 0;
+
+        // On remplace l'ancienne valeur par notre valeur dynamique autonome
+        $stats['energy_level'] = $energie_virtuelle;
+
+
+        // --- LOGIQUE D'AFFICHAGE DES IMAGES ---
+        if ($stats['energy_level'] > 80) {
+            $image_joueur = "assets/playerfocus.png"; // Mode Haki Éveillé
+        } 
+        elseif ($stats['energy_level'] < 35) {
+            $image_joueur = "assets/luffystyle.png"; 
+        } 
+        else {
+            // Énergie normale : On tire au sort entre la posture normale et le sourire
+            $image_joueur = (rand(1, 2) === 1) ? "assets/playerfocus.png" : "assets/smilestyle.png";
+        }
     }
 } catch (Exception $e) {
-    $stats = ['points' => 0, 'assists' => 0, 'energy_level' => 0, 'age' => 0, 'taille' => 0, 'style_jeu' => 'Non défini'];
-    $image_joueur = "assets/luffystyle.png";
+    $image_joueur = "assets/playerfocus.png";
 }
 ?>
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
