@@ -15,10 +15,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // 3. Exécution avec les vraies valeurs
         $stmt->execute(['nom' => $nom, 'club' => $club, 'msg' => $msg]);
 
-        echo "✅ Message envoyé au capitaine ! Redirection...";
+        echo "Message envoyé au capitaine ! Redirection...";
         header("Refresh: 2; URL=index.php"); // Revient à l'accueil après 2 sec
     } catch (PDOException $e) {
-        die("❌ Erreur de transmission : " . $e->getMessage());
+        die(" Erreur de transmission : " . $e->getMessage());
     }
 }
 ?>

@@ -1,6 +1,9 @@
 <?php 
 require_once 'config.php'; 
 
+$stats = [];
+$image_joueur = "assets/playerfocus.png";
+
 try {
     $query = $pdo->query("SELECT * FROM joueur_stats LIMIT 1");
     $stats = $query->fetch(PDO::FETCH_ASSOC);
@@ -36,6 +39,8 @@ try {
         }
     }
 } catch (Exception $e) {
+    error_log("index.php error: " . $e->getMessage());
+    $stats = [];
     $image_joueur = "assets/playerfocus.png";
 }
 ?>
@@ -53,7 +58,7 @@ try {
 <div class="top-ribbon">
     <div class="ribbon-text">
         <!-- Message principal du ruban -->
-        <span>🏴‍☠️ RECRUTEMENT DE L'ÉQUIPAGE OUVERT - SAISON 2026 🏀</span>
+        <span>RECRUTEMENT DE L'ÉQUIPAGE OUVERT - SAISON 2026 </span>
     </div>
 </div>
 <!-- FIN DU RUBAN  -->
@@ -175,9 +180,9 @@ try {
             const nrg = <?= intval($stats['energy_level'] ?? 0) ?>;
 
             if (nrg > 80) {
-                bulle.innerText = "Je suis bouillant pour le prochain match ! 🏀";
+                bulle.innerText = "Je suis bouillant pour le prochain match ! ";
             } else if (nrg < 40) {
-                bulle.innerText = "Besoin de repos... et de viande ! 🍖";
+                bulle.innerText = "Besoin de repos... et de viande ! miam !";
             }
         });
     </script>
