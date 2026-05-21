@@ -31,11 +31,11 @@ try {
             $image_joueur = "assets/playerfocus.png"; // Mode Haki Éveillé
         } 
         elseif ($stats['energy_level'] < 35) {
-            $image_joueur = "assets/luffystyle.png"; 
+            $image_joueur = "assets/luffystyle.png";
         } 
         else {
             // Énergie normale : On tire au sort entre la posture normale et le sourire
-            $image_joueur = (rand(1, 2) === 1) ? "assets/playerfocus.png" : "assets/smilestyle.png";
+            $image_joueur = "assets/smilestyle.png";
         }
     }
 } catch (Exception $e) {
@@ -186,6 +186,7 @@ try {
             }
         });
     </script>
+    <script src="Script.js"></script>
    <footer class="footer-pirate">
     <div class="footer-content">
         <!--  Copyright -->
